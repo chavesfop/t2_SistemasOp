@@ -1,6 +1,11 @@
 # t2_SistemasOp
 t2_SistemasOp
 
+##TODO List
+- Informar perda caso atinja o tempo maximo P.
+- 
+
+
 ## Descrição do Problema
 O objetivo deste trabalho é que o estudante aplique os conceitos de threads, exclusão mútua e coordenação de processos por meio do projeto e implementação de um jogo simples.
 
@@ -15,9 +20,9 @@ O jogo tem cinco níveis de dificuldade: fácil, intermediário e difícil. No f
 O objetivo deste trabalho é implementar o jogo em Java ou em C.
 
 ## Grupos, Avaliação e Entrega
-O trabalho deverá ser realizado em grupos de até 3 estudantes. Os estudantes serão responsáveis por formar os grupos com auxilio da ferramenta Escolha de Grupos - Trabalho 2 (T2) disponível no Moodle. Um dos integrantes de cada grupo deverá submeter, via Moodle, um arquivo contendo o código fonte em C ou Java contendo a solução do trabalho. Mesmo estudantes que realizarem o trabalho sozinhos deverão se enquadrar em algum grupo. A data/hora limite para o envio dos trabalhos é 27/11/2018 às 23:55h.  
+O trabalho deverá ser realizado em grupos de até 3 estudantes. Os estudantes serão responsáveis por formar os grupos com auxilio da ferramenta Escolha de Grupos - Trabalho 2 (T2) disponível no Moodle. Um dos integrantes de cada grupo deverá submeter, via Moodle, um arquivo contendo o código fonte em `C` ou `Java` contendo a solução do trabalho. Mesmo estudantes que realizarem o trabalho sozinhos deverão se enquadrar em algum grupo. A data/hora limite para o envio dos trabalhos é `27/11/2018 às 23:55h`.  
 Não será permitida a entrega de trabalhos fora desse prazo: trabalhos não enviados no prazo receberão nota zero. Após a data limite para entrega, os alunos deverão agendar a apresentação do trabalho com professor.  
 O professor irá avaliar não somente a corretude mas também o desempenho e a clareza da solução. Além disso, os estudantes serão avaliados pela apresentação e entendimento do trabalho.  
-A implementação e apresentação valerão 40% e 60% da nota do trabalho, respectivamente.  
-Na apresentação, o professor questionará individualmente cada componente do grupo sobre aspectos das estratégias utilizadas e sobres aspectos de código da implementação. Caso a implementação exija que o jogador forneça as coordenadas da jogada em vez de movimentar-se no tabuleiro por meio das setas ou mouse, a nota máxima será 8,0 (oito).
+A implementação e apresentação valerão `40%` e `60%` da nota do trabalho, respectivamente.  
+Na apresentação, o professor questionará individualmente cada componente do grupo sobre aspectos das estratégias utilizadas e sobres aspectos de código da implementação. Caso a implementação `exija que o jogador forneça as coordenadas da jogada` em vez de movimentar-se no tabuleiro por meio das setas ou mouse, a nota máxima será `8,0` (oito).
 
