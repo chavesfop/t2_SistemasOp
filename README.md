@@ -3,7 +3,7 @@ t2_SistemasOp
 
 ##TODO List
 - Informar perda caso atinja o tempo maximo P.
-- 
+- Tratamento de concorrencia de acesso ao objeto botão (mutex?)
 
 
 ## Descrição do Problema
