@@ -6,14 +6,21 @@
 package t1_sistemasop;
 
 import java.awt.GridLayout;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import static java.lang.Thread.sleep;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author 00989643999
  */
 public class FrmMain extends javax.swing.JFrame {
-    private JButton botoes[][];
+    public Tabuleiro tabuleiro;
     /**
      * Creates new form FrmMain
      */
@@ -31,31 +38,18 @@ public class FrmMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 600));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -98,22 +92,32 @@ public class FrmMain extends javax.swing.JFrame {
     
     private void initLayoutNosso(){
         setSize(800, 600);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(800, 600));
+
         
-        GridLayout grid = new GridLayout(10, 10);
-        jPanel1.setLayout(grid);
+        //daqui para baixo gerado pelo NetBeans quando adicionamos o JPanel no JFrame, alterado o JPanel pelo objeto Tabuleiro
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         
-        botoes = new JButton[10][10];
-        for (int x = 0; x < 10; x++){
-            for (int y = 0; y < 10; y++){
-                botoes[x][y] = new JButton("teste");
-                botoes[x][y].setText("#");
-                jPanel1.add(botoes[x][y]);
-            }
+        String[] dificuldade = { "Fácil", "Médio", "Difícil", "666!" };
+        int returnValue = JOptionPane.showOptionDialog(null, "O jogo irá terminar quando você clicar em todos os #", "Selecione a dificuldade",
+                2, JOptionPane.QUESTION_MESSAGE, null, dificuldade, dificuldade[0]);
+        if (returnValue == -1){
+            JOptionPane.showMessageDialog(null, "OMG. Modo impossível ativado", ":O ", 0);
         }
-        
+        this.tabuleiro = new Tabuleiro(returnValue);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(this.tabuleiro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(this.tabuleiro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
